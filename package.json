@@ -1,0 +1,8 @@
+{
+  "name": "bulma-squeezebox",
+  "version": "0.1.17",
+  "description": "An accordion nav for the Bulma framework",
+  "repository": "https://github.com/lucperkins/bulma-squeezebox",
+  "author": "Luc Perkins <lucperkins@gmail.com>",
+  "license": "ISC"
+}

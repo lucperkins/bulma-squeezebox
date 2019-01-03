@@ -1,0 +1,67 @@
+$squeezebox-fade-time: .3s !default
+$squeezebox-label-font-size: 1.5rem !default
+$squeezebox-label-color: $dark !default
+$squeezebox-tab-top-margin: .25rem !default
+$squeezebox-tab-content-margin: .5rem 0 !default
+$squeezebox-tab-list-item-top-margin: .25rem !default
+$squeezebox-tab-list-item-font-size: 1rem !default
+$squeezebox-tab-list-item-color: $dark !default
+$squeezebox-label-hover-color: $primary !default
+$squeezebox-tab-list-item-hover-color: $white !default
+$squeezebox-plus-color: $red !default
+
+=hide
+  display: none
+
+.squeezebox
+  .tab
+    input
+      +hide
+
+      &:checked
+        & ~ .tab-hidden
+          height: auto
+          opacity: 1
+          display: block
+          transition: opacity $squeezebox-fade-time ease-in-out
+
+    label
+      font-size: $squeezebox-label-font-size
+      color: $squeezebox-label-color
+      position: relative
+      display: block
+      cursor: pointer
+      line-height: 110%
+
+      &:hover
+        color: $squeezebox-label-hover-color
+
+      &.plus
+        &::after
+          content: '+'
+          position: absolute
+          right: 0
+          color: $squeezebox-plus-color
+
+    &-hidden
+      height: 0
+      opacity: 0
+      overflow: hidden
+
+      &-content
+        margin: $squeezebox-tab-content-margin
+        display: block
+
+        ul
+          li a
+            font-size: $squeezebox-tab-list-item-font-size
+            color: $squeezebox-tab-list-item-color
+
+            &:hover
+              color: $squeezebox-tab-list-item-hover-color
+
+            & + li
+              margin-top: $squeezebox-tab-list-item-top-margin
+
+    & + .tab
+      margin-top: $squeezebox-tab-top-margin
