@@ -9,6 +9,7 @@ $squeezebox-tab-list-item-color: $dark !default
 $squeezebox-label-hover-color: $primary !default
 $squeezebox-tab-list-item-hover-color: $white !default
 $squeezebox-plus-color: $red !default
+$squeezebox-plus-marker: '+' !default
 
 =hide
   display: none
@@ -38,7 +39,7 @@ $squeezebox-plus-color: $red !default
 
       &.plus
         &::after
-          content: '+'
+          content: $squeezebox-plus-marker
           position: absolute
           right: 0
           color: $squeezebox-plus-color
